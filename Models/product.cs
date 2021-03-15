@@ -5,14 +5,16 @@ using System.Threading.Tasks;
 
 namespace Spectra_inventory.Models
 {
-    public class product
+    public class Product
     {
-        public int Product_id { get; set; }
-        public string name { get; set; }
-        public decimal price { get; set; }
-        public int parlevel { get; set; }
+        public int ProductID { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public int Par { get; set; }
 
-        public int category_id { get; set; }
+        public int CategoryID { get; set; }
 
+        
+        public IEnumerable<Category> Category { get; internal set; }
     }
 }
